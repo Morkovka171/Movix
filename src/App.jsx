@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 
 import { fetchDataFromApi } from "./utils/api";
 
@@ -52,7 +52,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -62,7 +62,7 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
